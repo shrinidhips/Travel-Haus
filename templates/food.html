@@ -1,0 +1,349 @@
+{% load static %}
+{% static "img2/food" as baseUrl %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Haus</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'css/bootstrap-datetimepicker.min.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'css/flexslider.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/templatemo-style.css' %}" rel="stylesheet" />
+    <link rel="icon" href="{% static 'img2\favicon_good.ico' %}" type="image/gif" sizes="16x16">
+    <style>
+      .zoom:hover {
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1); 
+        }
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+      .actualbody {
+        background-image: url("{% static 'img2/indian.jpg' %}");
+      }
+      .containerfood {
+        /* border: 2px solid #1c1427; */
+        background-color: #f1f1f1;
+        /* border-radius: 5px; */
+        margin: 60px 0;
+        max-width: 800px;
+        padding: 20px 40px;
+      }
+
+      .containerfood::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .containerfood img {
+        float: left;
+        max-width: 275px;
+        width: 275px;
+        max-height: 275px;
+        height: 275px;
+        margin-right: 50px;
+        border-radius: 50%;
+      }
+
+      .containerfood img.right {
+        float: right;
+        margin-left: 20px;
+        margin-right: 0;
+      }
+
+      .rating-right {
+        float: right;
+        color: #aaa;
+        font-size: 1.5vw;
+      }
+
+      .rating-left {
+        float: left;
+        color: #999;
+        font-size: 1.5vw;
+      }
+
+      .title {
+        text-align: center;
+        background-color: whitesmoke;
+        font-size: 4rem;
+      }
+
+      .parafood {
+        font-family: "Dosis";
+        font-size: medium;
+        font-weight: 500;
+      }
+    </style>
+    
+  </head>
+  <body>
+    
+    <div class="tm-header" id="myhead">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
+            <a href="index" ><img src="{% static 'img/logo.png' %}" style="z-index: 1" alt="logo" width="120vew" height="60vew" ! Important /></a>
+  				</div>
+	  			<div class="col-lg-6 col-md-8 col-sm-9">
+	  				<div class="mobile-menu-icon">
+		              <i class="fa fa-bars"></i>
+		            </div>
+	  				<nav class="tm-nav">
+						<ul>
+							<li><a href="index">Home</a></li>
+							<li><a href="about">About</a></li>
+							<li><a href="tours">Our Tours</a></li>
+							<li><a href="contact">Contact us</a></li>
+						</ul>
+					</nav>		
+	  			</div>				
+  			</div>
+  		</div>	  	
+  	</div>
+	
+	<!-- Banner -->
+	<section class="tm-banner">
+		<!-- Flexslider -->
+		<div class="flexslider flexslider-banner">
+		  <ul class="slides">
+		    <li>
+			    <div class="tm-banner-inner">
+					<h1 class="tm-banner-title">Find <span class="tm-yellow-text">The Best</span> Place</h1>
+					<p class="tm-banner-subtitle">For Your Holidays</p>
+					<a href="#more" class="tm-banner-link">Learn More</a>	
+				</div>
+				<img src="{% static 'img2/food3.jpg' %}" alt="Image" />	
+		    </li>
+		    <li>
+			    <div class="tm-banner-inner">
+					<h1 class="tm-banner-title">Have <span class="tm-yellow-text">Lots of Fun</span>  with</h1>
+					<p class="tm-banner-subtitle">Wonderful Destinations</p>
+					<a href="#more" class="tm-banner-link">Learn More</a>	
+				</div>
+		      <img src="{% static 'img2/food2.jpg' %}" alt="Image" />
+		    </li>
+		    <li>
+			    <div class="tm-banner-inner">
+					<h1 class="tm-banner-title">Travel <span class="tm-yellow-text"> is the </span> Healthiest </h1>
+					<p class="tm-banner-subtitle">Addiction</p>
+					<a href="#more" class="tm-banner-link">Learn More</a>	
+				</div>
+		      <img src="{% static 'img2/food1.jpg' %}" alt="Image" />
+		    </li>
+		  </ul>
+		</div>
+	</section>
+  <div class="actualbody">
+  <div class="tm-section-header" >
+    <div style="margin-top: 50px; color:black">
+    <div class="col-lg-3 col-md-3 col-sm-3" ><hr></div>
+    <div class="col-lg-6 col-md-6 col-sm-6"><h2 class="tm-banner-title" style="color: #FCDD44; text-align: center;">FOOD THE LOVE!</h2></div>
+    <div class="col-lg-3 col-md-3 col-sm-3"><hr></div>
+  </div>
+</div>
+<div id="more">
+{% for k,v in foods.items %}
+    <div class="containerfood" >
+      <img
+        src="{{baseUrl}}/{{k}}.jpg"
+        alt="Avatar"
+        style="width: 100%"
+      />
+      <h1>{{k}}</h1>
+      <br>
+      <p class="parafood">
+        {{v}}
+      </p>
+    </div>
+{% endfor %}
+</div>
+    <!-- <div class="containerfood">
+      <img
+        src="{% static 'img2/food.jpg' %}"
+        alt="Avatar"
+        class="right"
+        style="width: 100%"
+      />
+      <h1>Title of the food</h1>
+      <h3>Price</h3>
+      <p class="parafood">
+        Brief intro, Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
+        placerat duis ultricies lacus sed. Egestas congue quisque egestas diam
+        in. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus
+        vel. Risus feugiat in ante metus dictum at tempor commodo ullamcorper
+      </p>
+      <span class="rating-left"><strong>Rating:</strong>⭐⭐⭐⭐</span>
+    </div>
+
+    <div class="containerfood">
+      <img
+        src="{% static 'img2/food.jpg' %}"
+        alt="Avatar"
+        style="width: 100%"
+      />
+      <h1>Title of the food</h1>
+      <h3>Price</h3>
+      <p class="parafood">
+        Brief intro, Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
+        placerat duis ultricies lacus sed. Egestas congue quisque egestas diam
+        in. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus
+        vel. Risus feugiat in ante metus dictum at tempor commodo ullamcorper
+      </p>
+      <span class="rating-right"><strong>Rating:</strong>⭐⭐⭐⭐⭐</span>
+    </div>
+
+    <div class="containerfood">
+      <img
+        src="{% static 'img2/food.jpg' %}"
+        alt="Avatar"
+        class="right"
+        style="width: 100%"
+      />
+      <h1>Title of the food</h1>
+      <h3>Price</h3>
+      <p class="parafood">
+        Brief intro, Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
+        placerat duis ultricies lacus sed. Egestas congue quisque egestas diam
+        in. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus
+        vel. Risus feugiat in ante metus dictum at tempor commodo ullamcorper
+      </p>
+      <span class="rating-left"><strong>Rating:</strong>⭐⭐⭐⭐</span>
+    </div> -->
+  
+    <footer class="tm-black-bg">
+      <div class="container">
+        <div class="row">
+          <div class="contact-social" style="float:right;">
+            <a href="#" class="tm-social-icon tm-social-facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="tm-social-icon tm-social-dribbble"><i class="fa fa-dribbble"></i></a>
+              <a href="#" class="tm-social-icon tm-social-twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="tm-social-icon tm-social-instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="tm-social-icon tm-social-google-plus"><i class="fa fa-google-plus"></i></a>
+          </div>
+          <p class="tm-copyright-text">Copyright &copy; TRAVEL HAUS</p>
+        </div>
+      </div>		
+    </footer>
+  </div>
+    <script type="text/javascript" src="{% static 'js/jquery-1.11.2.min.js' %}"></script>      		<!-- jQuery -->
+      <script type="text/javascript" src="{% static 'js/moment.js' %}"></script>							<!-- moment.js -->
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>					<!-- bootstrap js -->
+    <script type="text/javascript" src="{% static 'js/bootstrap-datetimepicker.min.js' %}"></script>	<!-- bootstrap date time picker js, http://eonasdan.github.io/bootstrap-datetimepicker/ -->
+    <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/header.js' %}"></script>
+  <!--
+    <script src="js/froogaloop.js"></script>
+    <script src="js/jquery.fitvid.js"></script>
+  -->
+       <script type="text/javascript" src="{% static 'js/templatemo-script.js' %}"></script>      		<!-- Templatemo Script -->
+    <script>
+      // HTML document is loaded. DOM is ready.
+      $(function() {
+  
+        $('#hotelCarTabs a').click(function (e) {
+          e.preventDefault()
+          $(this).tab('show')
+        })
+        
+  
+            $('.date').datetimepicker({
+                format: 'MM/DD/YYYY'
+              });
+              $('.date-time').datetimepicker();
+  
+        // https://css-tricks.com/snippets/jquery/smooth-scrolling/
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+      });
+      
+      // Load Flexslider when everything is loaded.
+      $(window).load(function() {	  		
+        // Vimeo API nonsense
+  
+  /*
+          var player = document.getElementById('player_1');
+          $f(player).addEvent('ready', ready);
+         
+          function addEvent(element, eventName, callback) {
+            if (element.addEventListener) {
+              element.addEventListener(eventName, callback, false)
+            } else {
+              element.attachEvent(eventName, callback, false);
+            }
+          }
+         
+          function ready(player_id) {
+            var froogaloop = $f(player_id);
+            froogaloop.addEvent('play', function(data) {
+              $('.flexslider').flexslider("pause");
+            });
+            froogaloop.addEvent('pause', function(data) {
+              $('.flexslider').flexslider("play");
+            });
+          }
+  */
+  
+         
+         
+          // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
+  /*
+  
+          $(".flexslider")
+            .fitVids()
+            .flexslider({
+              animation: "slide",
+              useCSS: false,
+              animationLoop: false,
+              smoothHeight: true,
+              controlNav: false,
+              before: function(slider){
+                $f(player).api('pause');
+              }
+          });
+  */
+  
+  
+          
+  
+  //	For images only
+          $('.flexslider').flexslider({
+            controlNav: false
+          });
+  
+  
+        });
+    </script>
+  </body>
+</html>

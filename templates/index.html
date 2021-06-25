@@ -1,0 +1,592 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travel Haus</title>
+<!--
+Holiday Template
+http://www.templatemo.com/tm-475-holiday
+-->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700" rel='stylesheet' type='text/css'>
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">  
+  <link href="{% static 'css/flexslider.css' %}" rel="stylesheet">
+  <link href="{% static 'css/templatemo-style.css' %}" rel="stylesheet">
+  <link rel="icon" href="{% static 'img2\favicon_good.ico' %}" type="image/gif" sizes="16x16">
+  <link href="{% static 'css/loginpage.css' %}" rel='stylesheet' type='text/css'>
+  <style>
+	.sticky {
+  		position: fixed;
+  		top: 0;
+  		width: 100%;
+	}
+	.zoom:hover {
+		-ms-transform: scale(1.1); /* IE 9 */
+		-webkit-transform: scale(1.1); /* Safari 3-8 */
+		transform: scale(1.1); 
+	  }
+	</style>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body class="tm-gray-bg">
+  	<!-- Header -->
+  	<div class="tm-header" id="myhead">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
+					<a href="index" ><img src="{% static 'img/logo.png' %}" style="z-index: 1" alt="logo" width="120vew" height="60vew" ! Important /></a>
+  				</div>
+	  			<div class="col-lg-6 col-md-8 col-sm-9">
+	  				<div class="mobile-menu-icon">
+		              <i class="fa fa-bars"></i>
+		            </div>
+	  				<nav class="tm-nav">
+						<ul>
+							<li><a href="index" class="active">Home</a></li>
+							<li><a href="about">About</a></li>
+							<li><a href="tours">Our Tours</a></li>
+							<li><a href="contact">Contact us</a></li>
+						</ul>
+					</nav>		
+	  			</div>				
+  			</div>
+  		</div>	  	
+  	</div>
+	
+	<!-- Banner -->
+	<section class="tm-banner">
+		<!-- Flexslider -->
+		<div class="flexslider flexslider-banner">
+		  <ul class="slides">
+		    <li>
+			    <div class="tm-banner-inner">
+					<h1 class="tm-banner-title">Find <span class="tm-yellow-text">The Best</span> Place</h1>
+					<p class="tm-banner-subtitle">For Your Holidays</p>
+					<a href="#more" class="tm-banner-link">Learn More</a>	
+				</div>
+				<img src="{% static 'img2/banner-1.jpg' %}" alt="Image" />	
+		    </li>
+		    <li>
+			    <div class="tm-banner-inner">
+					<h1 class="tm-banner-title">Have <span class="tm-yellow-text">Lots of Fun</span>  with</h1>
+					<p class="tm-banner-subtitle">Wonderful Destinations</p>
+					<a href="#more" class="tm-banner-link">Learn More</a>	
+				</div>
+		      <img src="{% static 'img2/banner-2.jpg' %}" alt="Image" />
+		    </li>
+		    <li>
+			    <div class="tm-banner-inner">
+					<h1 class="tm-banner-title">Travel <span class="tm-yellow-text"> is the </span> Healthiest </h1>
+					<p class="tm-banner-subtitle">Addiction</p>
+					<a href="#more" class="tm-banner-link">Learn More</a>	
+				</div>
+		      <img src="{% static 'img2/banner-3.jpg' %}" alt="Image" />
+		    </li>
+		  </ul>
+		</div>	
+	</section>
+
+	<!-- gray bg -->	
+	<section class="container tm-home-section-1" id="more">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<!-- Nav tabs -->
+				<div class="tm-home-box-1">
+					<ul class="nav nav-tabs tm-white-bg" role="tablist" id="saavufmlTabs">
+					    <li role="presentation" class="active">
+					    	<a href="#saavu" aria-controls="saavu" role="tab" data-toggle="tab">LOGIN</a>
+					    </li>
+					    <li role="presentation">
+					    	<a href="#fml" aria-controls="fml" role="tab" data-toggle="tab">REGISTER</a>
+					    </li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+					    <div role="tabpanel" class="tab-pane fade in active tm-white-bg" id="saavu">
+					    	<div class="tm-search-box effect10">
+								<form method="POST" action="test" class="saavu-search-form">
+									<div class="tm-form-inner">
+										<br>
+										<div class="form-group">
+											<label for="fname">USERNAME:</label>
+  											<input type="text"  name="fname"><br>
+							          	</div>
+							          	<div class="form-group">
+							                <label for="lname">PASSWORD:</label>
+  											<input type="password"  name="lname"><br>
+							            </div>
+									</div>							
+						            <div class="form-group tm-yellow-gradient-bg text-center">
+						            	<button type="submit" class="tm-yellow-btn">LOGIN</button>
+						            </div>  
+								</form>
+							</div>
+					    </div>
+					    <div role="tabpanel" class="tab-pane fade tm-white-bg" id="fml">
+							<div class="tm-search-box effect10">
+								<form action="food" method="POST" class="saavu-search-form">
+									<div class="tm-form-inner">
+										<br>
+										<div class="form-group">
+							                <label for="lname">FULL NAME:</label>
+  											<input type="text" name="lname">
+							            </div>
+							          	<div class="form-group">
+							                <label for="lname">EMAIL - ID:</label>
+  											<input type="text" name="lname">
+							            </div>					           
+									</div>							
+						            <div class="form-group tm-yellow-gradient-bg text-center">
+						            	<button onclick="myFunctionx()" type="submit" name="submit" class="tm-yellow-btn">VALIDATE</button>
+						            </div>  
+								</form>
+							</div>
+					    </div>				    
+					</div>
+				</div>								
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<!-- Nav tabs -->
+				<div class="tm-home-box-1">
+					<ul class="nav nav-tabs tm-white-bg" role="tablist" id="hotelCarTabs">
+					    <li role="presentation" class="active">
+					    	<a href="#hotel" aria-controls="hotel" role="tab" data-toggle="tab">Hotspots</a>
+					    </li>
+					    <li role="presentation">
+					    	<a href="#car" aria-controls="car" role="tab" data-toggle="tab">Food</a>
+					    </li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+					    <div role="tabpanel" class="tab-pane fade in active tm-white-bg" id="hotel">
+					    	<div class="tm-search-box effect2">
+								<form method="POST" action="test" class="hotel-search-form">
+									<div class="tm-form-inner">
+										<div class="form-group">
+											<h3 style="text-align: center;">"FLY AWAY WITH US"</h3>
+							          	</div>
+							          	<div class="form-group">
+							                <h3 style="text-align: center;">"TO YOUR DESTINATION"</h3>
+							            </div>
+										<div class="form-group">
+							                <h3 style="text-align: center;">"IT'S ALL HERE"</h3>
+							            </div>
+										<br>
+							          	<div class="form-group">
+							                <select name="place" class="form-control"> 
+												<option value="None">-- Select Place -- </option>
+							            	 	<option value="mysore">Mysore</option>
+												<option value="manglore">Manglore</option>
+												<option value="coorg">Coorg</option>
+												<option value="chikmagalur">Chikmagalur</option>
+												<option value="vijayanagara">Vijayanagara</option>
+										   </select> 
+							            </div>
+							            
+									</div>							
+						            <div class="form-group tm-yellow-gradient-bg text-center">
+						            	<button type="submit" class="tm-yellow-btn">Check Now</button>
+						            </div>  
+								</form>
+							</div>
+					    </div>
+					    <div role="tabpanel" class="tab-pane fade tm-white-bg" id="car">
+							<div class="tm-search-box effect2">
+								<form action="food" method="POST" class="hotel-search-form">
+									<div class="tm-form-inner">
+										
+							          	<div class="form-group">
+							                <h3 style="text-align: center;">"EVER FELT TRUE LOVE?"</h3>
+							            </div>
+							          	<div class="form-group">
+							                <h3 style="text-align: center;">"YEAH! IT'S LOCAL FOOD"</h3>
+							            </div>
+										<div class="form-group">
+							                <h3 style="text-align: center;">"SOUTH TO MOUTH"</h3>
+							            </div>
+										<br>
+							            <div class="form-group">
+											<select name="place" class="form-control"> 
+												<option value="None">-- Select Place -- </option>
+							            	 	<option value="mysore">Mysore</option>
+												<option value="manglore">Manglore</option>
+												<option value="coorg">Coorg</option>
+												<option value="chikmagalur">Chikmagalur</option>
+												<option value="vijayanagara">Vijayanagara</option>
+										   </select> 
+										 </div>							           
+									</div>							
+						            <div class="form-group tm-yellow-gradient-bg text-center">
+						            	<button  type="submit" name="submit" class="tm-yellow-btn">Check Now</button>
+						            </div>  
+								</form>
+							</div>
+					    </div>				    
+					</div>
+				</div>								
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<div class="zoom">
+				<div class="tm-home-box-1 tm-home-box-1-2 tm-home-box-1-center effect2">
+					<img src="{% static 'img2/index-01.jpg' %}" alt="image" class="img-responsive">
+					<a href="test1">
+						<div class="tm-green-gradient-bg tm-city-price-container">
+							<span>#1 Trending Hotspot </span>
+							<span></span>
+						</div>	
+					</a>			
+				</div>
+				</div>			
+			</div>
+		</div>
+	
+		<div class="section-margin-top" id="yes">
+			<div class="row">				
+				<div class="tm-section-header">
+					<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>
+					<div class="col-lg-6 col-md-6 col-sm-6"><h2 class="tm-section-title">Our Popular Services</h2></div>
+					<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="zoom">
+					<div class="tm-home-box-2 effect2">						
+						<img src="{% static 'img2/index-03.jpg' %}" alt="image" class="img-responsive">
+						<h3>Food is symbolic of love when words are inadequate</h3>
+						<p class="tm-date" style="color: black; font-weight:800" !Important>Check in</p>
+						<div class="tm-home-box-2-container">
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+							<a href="test6" class="tm-home-box-2-link"><span class="tm-home-box-2-description">FOOD</span></a>
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="zoom">
+					<div class="tm-home-box-2 effect2">						
+					    <img src="{% static 'img2/index-04.jpg' %}" alt="image" class="img-responsive">
+						<h3>We provide range of experiences not just accommodation</h3>
+						<p class="tm-date" style="color: black; font-weight:800" !Important>Check in</p>
+						<div class="tm-home-box-2-container">
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+							<a  href="#yes" class="tm-home-box-2-link"><span class="tm-home-box-2-description">STAY</span></a>
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="zoom">
+					<div class="tm-home-box-2 effect2">						
+					    <img src="{% static 'img2/index-05.jpg' %}" alt="image" class="img-responsive">
+						<h3>Life is either a daring adventure or absolutely nothing</h3>
+						<p class="tm-date" style="color: black; font-weight:800" !Important>Check in</p>
+						<div class="tm-home-box-2-container">
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+							<a  href="#yes" class="tm-home-box-2-link"><span class="tm-home-box-2-description">ADVENTURE</span></a>
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="zoom">
+					<div class="tm-home-box-2 tm-home-box-2-right effect2">						
+					    <img src="{% static 'img2/index-06.jpg' %}" alt="image" class="img-responsive">
+						<h3>I don’t know where I’m going but I’m going.Are you coming with me?</h3>
+						<p class="tm-date" style="color: black; font-weight:800" !Important>Check in</p>
+						<div class="tm-home-box-2-container">
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+							<a href="tours" class="tm-home-box-2-link"><span class="tm-home-box-2-description">Travel</span></a>
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<br>
+					<p class="home-description" style="font-weight: 800; font-size:medium">“A vacation is what you take when you can no longer take what you've been taking.”</p>					
+				</div>
+			</div>			
+		</div>
+	</section>		
+	
+	<!-- white bg -->
+	<section class="tm-white-bg section-padding-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="tm-section-header section-margin-top">
+					<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>
+					<div class="col-lg-4 col-md-6 col-sm-6"><h2 class="tm-section-title">Popular Packages</h2></div>
+					<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>	
+				</div>
+				<div class="col-lg-6">
+					<div class="zoom">
+					<div class="tm-home-box-3">
+						<div class="tm-home-box-3-img-container">
+							<img src="{% static 'img2/index-07.jpg' %}" alt="image" class="img-responsive">	
+						</div>						
+						<div class="tm-home-box-3-info">
+							<p class="tm-home-box-3-description">Mysore is a vibrant city teeming with tourists. Its grand palaces, temples, gardens leave an ever-lasting impression on the visitor.</p>
+					        <div class="tm-home-box-2-container">
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+							<a href="test5" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+						</div>
+						</div>						
+					</div>	
+					</div>				
+			     </div>
+			     <div class="col-lg-6">
+					<div class="zoom">
+			        <div class="tm-home-box-3">
+						<div class="tm-home-box-3-img-container">
+							<img src="{% static 'img2/index-08.jpg' %}" alt="image" class="img-responsive">	
+						</div>						
+						<div class="tm-home-box-3-info">
+							<p class="tm-home-box-3-description">Mangalore is a port city and the headquarters of Dakshina Kannada district in the coastal region of Karnataka.</p>
+					        <div class="tm-home-box-2-container">
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+							<a href="test4" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+						</div>
+						</div>						
+					</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="zoom">
+				    <div class="tm-home-box-3">
+						<div class="tm-home-box-3-img-container">
+							<img src="{% static 'img2/index-09.jpg' %}" alt="image" class="img-responsive">	
+						</div>						
+						<div class="tm-home-box-3-info">
+							<p class="tm-home-box-3-description">Coorg is famous for its coffee plantations, steep hills, countless streams, rich flora & fauna, lush forests and breathtaking views./p>
+					        <div class="tm-home-box-2-container">
+							<a  style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+							<a href="test1" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
+							<a  style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+						</div>
+						</div>						
+					</div>
+					</div>
+			    </div>
+			    <div class="col-lg-6">
+					<div class="zoom">
+			        <div class="tm-home-box-3">
+						<div class="tm-home-box-3-img-container">
+							<img src="{% static 'img2/chikmagalur-pp.jpg' %}" alt="image" class="img-responsive">	
+						</div>						
+						<div class="tm-home-box-3-info">
+							<p class="tm-home-box-3-description">Home to sprawling hills, stunning valleys and snow-white coffee blossoms. A calm, serene town full of scenic surprises.</p>
+					        <div class="tm-home-box-2-container">
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
+							<a href="test2" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
+							<a style="width:auto;" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
+						</div>
+						</div>						
+					</div>
+					</div>
+			   	</div>
+			</div>		
+		</div>
+	</section>
+	<footer class="tm-black-bg">
+		<div class="container">
+			<div class="row">
+				<div class="contact-social" style="float:right;">
+					<a href="#" class="tm-social-icon tm-social-facebook"><i class="fa fa-facebook"></i></a>
+					  <a href="#" class="tm-social-icon tm-social-dribbble"><i class="fa fa-dribbble"></i></a>
+					  <a href="#" class="tm-social-icon tm-social-twitter"><i class="fa fa-twitter"></i></a>
+					  <a href="#" class="tm-social-icon tm-social-instagram"><i class="fa fa-instagram"></i></a>
+					  <a href="#" class="tm-social-icon tm-social-google-plus"><i class="fa fa-google-plus"></i></a>
+				</div>
+				<p class="tm-copyright-text">Copyright &copy; TRAVEL HAUS</p>
+			</div>
+		</div>		
+	</footer>
+	<script type="text/javascript" src="{% static 'js/jquery-1.11.2.min.js' %}"></script>      		<!-- jQuery -->
+  	<script type="text/javascript" src="{% static 'js/moment.js' %}"></script>							<!-- moment.js -->
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>					<!-- bootstrap js -->
+	<script type="text/javascript" src="{% static 'js/bootstrap-datetimepicker.min.js' %}"></script>	<!-- bootstrap date time picker js, http://eonasdan.github.io/bootstrap-datetimepicker/ -->
+	<script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/header.js' %}"></script>
+<!--
+	<script src="js/froogaloop.js"></script>
+	<script src="js/jquery.fitvid.js"></script>
+-->
+   	<script type="text/javascript" src="{% static 'js/templatemo-script.js' %}"></script>      		<!-- Templatemo Script -->
+	<script>
+		function myFunctionx() {
+			alert("Check your mail to validate");
+		  }
+		// HTML document is loaded. DOM is ready.
+		$(function() {
+
+			$('#hotelCarTabs a').click(function (e) {
+			  e.preventDefault()
+			  $(this).tab('show')
+			})
+
+        	$('.date').datetimepicker({
+            	format: 'MM/DD/YYYY' 
+            });
+            $('.date-time').datetimepicker();
+
+			// https://css-tricks.com/snippets/jquery/smooth-scrolling/
+		  	$('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000);
+			        return false;
+			      }
+			    }
+		  	});
+		});
+		$(function() {
+
+			$('#saavufmlTabs a').click(function (e) {
+			  e.preventDefault()
+			  $(this).tab('show')
+			})
+
+        	$('.date').datetimepicker({
+            	format: 'MM/DD/YYYY' 
+            });
+            $('.date-time').datetimepicker();
+
+			// https://css-tricks.com/snippets/jquery/smooth-scrolling/
+		  	$('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000);
+			        return false;
+			      }
+			    }
+		  	});
+		});
+		
+		
+		// Load Flexslider when everything is loaded.
+		$(window).load(function() {	  		
+			// Vimeo API nonsense
+
+/*
+			  var player = document.getElementById('player_1');
+			  $f(player).addEvent('ready', ready);
+			 
+			  function addEvent(element, eventName, callback) {
+			    if (element.addEventListener) {
+			      element.addEventListener(eventName, callback, false)
+			    } else {
+			      element.attachEvent(eventName, callback, false);
+			    }
+			  }
+			 
+			  function ready(player_id) {
+			    var froogaloop = $f(player_id);
+			    froogaloop.addEvent('play', function(data) {
+			      $('.flexslider').flexslider("pause");
+			    });
+			    froogaloop.addEvent('pause', function(data) {
+			      $('.flexslider').flexslider("play");
+			    });
+			  }
+*/
+
+			 
+			 
+			  // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
+/*
+
+			  $(".flexslider")
+			    .fitVids()
+			    .flexslider({
+			      animation: "slide",
+			      useCSS: false,
+			      animationLoop: false,
+			      smoothHeight: true,
+			      controlNav: false,
+			      before: function(slider){
+			        $f(player).api('pause');
+			      }
+			  });
+*/
+
+
+			  
+
+//	For images only
+		    $('.flexslider').flexslider({
+			    controlNav: false
+		    });
+
+
+	  	});
+	</script>
+<div id="id01" class="moodal">
+  <form class="moodal-coontent animate1" action="/action_page.php" method="post">
+    <div class="imgcontainer1">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="{% static 'img2/login-final.png' %}" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="containerx">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="containerx" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+var modal = document.getElementById('id01')
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+	function changeText(id) {
+	  id.innerHTML = "  WAIT FOR US  ";
+	}
+</script>
+ </body>
+ </html>

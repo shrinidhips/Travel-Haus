@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="test">
+        {% csrf_token %}
+        <select name="place" class="form-control"> 
+            <option  value="None">-- Select Place -- </option>
+             <option value="mysore">mysore</option>
+            <option value="manglore">manglore</option>
+            <option value="coorg">coorg</option>
+            <option value="chikmagalur">chikmagalur</option>
+            <option value="vijayanagara">vijayanagara</option>
+       </select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
